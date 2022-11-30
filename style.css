@@ -128,7 +128,7 @@ body {
     cursor: pointer;
 }
 
-.keyboard button:hover {
+.keyboard button:hover, .keyboard button:active {
     position: relative;
     z-index: 1;
     transform: scale(1.25);
