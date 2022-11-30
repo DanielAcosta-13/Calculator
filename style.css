@@ -1,0 +1,212 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+}
+
+#modeBtn {
+    position: absolute;
+    width: 75px;
+    height: 50px;
+    margin: 25px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bi {
+    font-size: 25px;
+}
+
+.bi-brightness-high-fill {
+    visibility: hidden;
+}
+
+.bi-moon-fill {
+    visibility: visible;
+    color: black;
+}
+
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.calculator {
+    padding: 50px;
+    border-radius: 50px;
+    display:inline-block;
+    background: transparent;
+    animation: glow1 1s infinite linear;
+}
+
+.display {
+    display: block;
+    padding: 35px;
+    color: white;
+    width: 455px;
+    height: 240px;
+    background-color: #171717;
+    border-radius: 25px;
+    font-family: 'Roboto Slab', serif;
+}
+
+.process {
+    margin-bottom: 25px;
+    font-size: 35px;
+    font-weight: 200;
+    letter-spacing: 5px;
+    width: 100%;
+    height: 50px;
+    overflow: auto;
+}
+
+.process::-webkit-scrollbar {
+    display: none;
+}
+
+.result {
+    font-size: 75px;
+    font-weight: 400;
+    width: 100%;
+    height: 105px;
+    overflow: auto;
+}
+
+.result::-webkit-scrollbar {
+    display: none;
+}
+
+.keyboard {
+    margin-top: 25px;
+    display: grid;
+    grid-template-columns: 60% 40%;
+    grid-template-rows: auto;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.colum1 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.colum2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+
+.keyboard button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 300;
+    font-size: 35px;
+    color: grey;
+    margin: 5px;
+    min-height: 80px;
+    min-width: 80px;
+    background: none;
+    border-radius: 25px;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+.keyboard button:hover {
+    position: relative;
+    z-index: 1;
+    transform: scale(1.25);
+    box-shadow: 0 0 15px gray;
+    color: white;
+}
+
+@keyframes glow1 {
+    0% {
+        box-shadow: 3px 3px 5px 0px rgba(15, 240, 252, 1),
+            -3px -3px 5px 0px rgba(255, 8, 232, 1);
+    }
+    25% {
+        box-shadow: -3px 3px 5px 0px rgba(15, 240, 252, 1),
+            3px -3px 5px 0px rgba(255, 8, 232, 1);
+    }
+    50% {
+        box-shadow: -3px -3px 5px 0px rgba(15, 240, 252, 1),
+            3px 3px 5px 0px rgba(255, 8, 232, 1);
+    }
+    75% {
+        box-shadow: 3px -3px 5px 0px rgba(15, 240, 252, 1),
+            -3px 3px 5px 0px rgba(255, 8, 232, 1);
+    }
+    100% {
+        box-shadow: 3px 3px 5px 0px rgba(15, 240, 252, 1),
+            -3px -3px 5px 0px rgba(255, 8, 232, 1);
+    }
+}
+
+
+/*--- --- --- Light Mode --- --- ---*/
+
+body.lightmode {
+    background-color: white;
+}
+
+.lightmode #modeBtn {
+    background-color: black;
+}
+
+.lightmode .bi-brightness-high-fill {
+    visibility: visible;
+    color: white;
+}
+
+.lightmode .bi-moon-fill {
+    visibility: hidden;
+}
+
+.lightmode .calculator {
+    animation: glow2 1s infinite linear;
+}
+
+.lightmode .keyboard button:hover {
+    box-shadow: 0 0 15px darkgray;
+    color: black;
+}
+
+@keyframes glow2 {
+    0% {
+        box-shadow: 3px 3px 5px 0px rgba(143, 0, 241, 1),
+            -3px -3px 5px 0px rgba(252, 116, 253, 1);
+    }
+    25% {
+        box-shadow: -3px 3px 5px 0px rgba(143, 0, 241, 1),
+            3px -3px 5px 0px rgba(252, 116, 253, 1);
+    }
+    50% {
+        box-shadow: -3px -3px 5px 0px rgba(143, 0, 241, 1),
+            3px 3px 5px 0px rgba(252, 116, 253, 1);
+    }
+    75% {
+        box-shadow: 3px -3px 5px 0px rgba(143, 0, 241, 1),
+            -3px 3px 5px 0px rgba(252, 116, 253, 1);
+    }
+    100% {
+        box-shadow: 3px 3px 5px 0px rgba(143, 0, 241, 1),
+            -3px -3px 5px 0px rgba(252, 116, 253, 1);
+    }
+}

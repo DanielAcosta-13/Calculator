@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CALCULATOR</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700&family=Rubik:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" type="text/javascript" defer></script>
+</head>
+<body>
+    <button id="modeBtn">
+        <i class="bi bi-brightness-high-fill"></i>
+        <i class="bi bi-moon-fill"></i>
+    </button>
+    <div class="container">
+        <div class="calculator">
+            <div class="display">
+                <div class="process" id="process"></div>
+                <div class="result" id="result"></div>
+            </div>
+            <div class="keyboard">
+                <div class="colum1">
+                    <button class="button">7</button>
+                    <button class="button">8</button>
+                    <button class="button">9</button>
+                    <button class="button">4</button>
+                    <button class="button">5</button>
+                    <button class="button">6</button>
+                    <button class="button">1</button>
+                    <button class="button">2</button>
+                    <button class="button">3</button>
+                    <button class="button">(</button>
+                    <button class="button">0</button>
+                    <button class="button">)</button>
+                </div>
+                <div class="colum2">
+                    <button id="del">&larr;</button>
+                    <button id="clear">c</button>
+                    <button class="button">&plus;</button>
+                    <button class="button">&minus;</button>
+                    <button class="button">&times;</button>
+                    <button class="button">&divide;</button>
+                    <button class="button">.</button>
+                    <button id="equal">&equals;</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
