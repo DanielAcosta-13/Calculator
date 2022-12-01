@@ -22,10 +22,8 @@ buttons.forEach(button => {
             process.textContent = result.textContent
             operation = result.textContent
             result.textContent = ""
-            displayProcess(button)
-        } else {
-            displayProcess(button)
         }
+        displayProcess(button)
     })
 });
 
